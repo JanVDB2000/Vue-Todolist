@@ -6,7 +6,7 @@ app.component('taak-toevoegen',{
         }
     },
     template:
-        `<div class=" col-10 offset-1">
+        `<div class=" col-8 offset-2">
                  <div class="shadow-lg m-4 mx-auto ">
                     <h1 class="text-center p-3">Takenlijst</h1>
                  </div>

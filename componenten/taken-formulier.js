@@ -9,8 +9,8 @@ app.component('taken-formulier', {
                     <div class="input-group-text">
                        <input @click="checkb(index)" class="form-check-input mt-0" type="checkbox" value="" aria-label="Checkbox for following text input">
                     </div>
-                        <input v-model="taak.taak" type="text" class="form-control" :class="{ 'text-decoration-line-through fw-bold': checkboxlijst[index] }" aria-label="Text input with checkbox">
-                        <button @click="verwijderden" class="btn btn-outline-secondary" type="submit"  id="button-addon2" ><i class="bi bi-trash-fill"></i></button>
+                        <input v-model="taak.taak" type="text" class="form-control" :class="{ 'text-decoration-line-through': checkboxlijst[index] }" aria-label="Text input with checkbox">
+                        <button @click="verwijderden(index)" class="btn btn-outline-secondary" type="submit"  id="button-addon2" ><i class="bi bi-trash-fill"></i></button>
                 </div>
                 </div>
                 </div>
@@ -27,8 +27,8 @@ app.component('taken-formulier', {
             this.checkboxlijst.push(this.isActive );
         },
         verwijderden(index){
-            this.taken.splice(index,1)
-            this.checkboxlijst.splice(index,1)
+            this.taken.splice(index,1);
+            this.checkboxlijst.splice(index,1);
         },
         verwijderlijst(){
             this.taken = [];
